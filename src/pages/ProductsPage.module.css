@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap');
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 60px 24px;
+}
+
+.pageTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  color: #1E2F23;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  color: #666;
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: 300;
+}
+
+.filterBar {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+
+.filterPill {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  padding: 10px 24px;
+  border-radius: 40px;
+  background: transparent;
+  border: 1.5px solid #C9A959;
+  color: #1E2F23;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.filterPill:hover {
+  background: rgba(201, 169, 89, 0.1);
+}
+
+.filterPill.active {
+  background: #C9A959;
+  color: #1E2F23;
+  border-color: #C9A959;
+}
+
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+@media (max-width: 1024px) {
+  .productGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .productGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .pageTitle {
+    font-size: 2.5rem;
+  }
+
+  .container {
+    padding: 40px 16px;
+  }
+}

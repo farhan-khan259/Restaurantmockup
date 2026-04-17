@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap');
+
+.contactPage {
+  padding: 60px 0;
+  background: #FDFBF7;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.pageTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  color: #1E2F23;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  color: #666;
+  text-align: center;
+  margin-bottom: 50px;
+  font-weight: 300;
+}
+
+.contentGrid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 40px;
+}
+
+.formCard, .infoCard {
+  background: #fff;
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+  border: 1px solid rgba(201, 169, 89, 0.1);
+}
+
+.formCard h2, .infoCard h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  color: #1E2F23;
+  margin-bottom: 30px;
+}
+
+.formGroup {
+  margin-bottom: 20px;
+}
+
+.formGroup label {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  color: #1E2F23;
+  margin-bottom: 8px;
+}
+
+.formGroup input,
+.formGroup select,
+.formGroup textarea {
+  width: 100%;
+  padding: 14px 16px;
+  font-family: 'Montserrat', sans-serif;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  background: #FDFBF7;
+}
+
+.formGroup input:focus,
+.formGroup select:focus,
+.formGroup textarea:focus {
+  outline: none;
+  border-color: #C9A959;
+}
+
+.submitButton {
+  background: #C9A959;
+  color: #1E2F23;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 16px 32px;
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  font-size: 1rem;
+  border: 2px solid #C9A959;
+}
+
+.submitButton:hover {
+  background: transparent;
+  color: #C9A959;
+}
+
+.infoItem {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.icon {
+  font-size: 1.8rem;
+}
+
+.infoItem h3 {
+  font-family: 'Playfair Display', serif;
+  color: #1E2F23;
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+}
+
+.infoItem p {
+  font-family: 'Montserrat', sans-serif;
+  color: #555;
+  line-height: 1.6;
+}
+
+.hours {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(201, 169, 89, 0.2);
+}
+
+.hours h3 {
+  font-family: 'Playfair Display', serif;
+  color: #1E2F23;
+  margin-bottom: 12px;
+}
+
+.hours p {
+  font-family: 'Montserrat', sans-serif;
+  color: #555;
+  line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+  .contentGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .pageTitle {
+    font-size: 2.5rem;
+  }
+
+  .formCard, .infoCard {
+    padding: 25px;
+  }
+}

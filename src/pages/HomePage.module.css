@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap');
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Hero Section */
+.hero {
+  height: 90vh;
+  background: url('https://images.pexels.com/photos/587741/pexels-photo-587741.jpeg?auto=compress&cs=tinysrgb&w=1600') center/cover no-repeat;
+  position: relative;
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.heroContent {
+  color: #FDFBF7;
+  padding: 20px;
+  max-width: 800px;
+}
+
+.brandName {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(3rem, 8vw, 5rem);
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+.tagline {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  margin-bottom: 30px;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.ctaButton {
+  display: inline-block;
+  background: #C9A959;
+  color: #1E2F23;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 14px 32px;
+  border-radius: 40px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 2px solid #C9A959;
+}
+
+.ctaButton:hover {
+  background: transparent;
+  color: #C9A959;
+}
+
+/* Specialties Section */
+.specialties {
+  padding: 80px 0;
+  background: #FDFBF7;
+}
+
+.sectionTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: #1E2F23;
+  text-align: center;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.sectionTitle::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: #C9A959;
+  margin: 15px auto 0;
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  padding-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(201, 169, 89, 0.15);
+}
+
+.cardImage {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+}
+
+.card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  color: #1E2F23;
+  margin: 20px 0 10px;
+}
+
+.card p {
+  font-family: 'Montserrat', sans-serif;
+  color: #555;
+  padding: 0 20px;
+  line-height: 1.6;
+  flex: 1;
+}
+
+/* Sustainability Section */
+.sustainability {
+  padding: 60px 0;
+  background: #F5F3EF;
+}
+
+.sustainabilityGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.sustainabilityLeft {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.leafIcon {
+  font-size: 3rem;
+}
+
+.sustainabilityLeft h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: #1E2F23;
+}
+
+.sustainabilityRight p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+/* CTA Banner */
+.ctaBanner {
+  background: #1E2F23;
+  padding: 60px 0;
+  text-align: center;
+  color: #FDFBF7;
+}
+
+.ctaBanner h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.ctaBanner p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  font-weight: 300;
+}
+
+.ctaButtonOutline {
+  display: inline-block;
+  background: transparent;
+  color: #C9A959;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 12px 30px;
+  border-radius: 40px;
+  text-decoration: none;
+  border: 2px solid #C9A959;
+  transition: all 0.3s ease;
+}
+
+.ctaButtonOutline:hover {
+  background: #C9A959;
+  color: #1E2F23;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .cardGrid {
+    gap: 20px;
+  }
+
+  .cardImage {
+    height: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 70vh;
+  }
+
+  .cardGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sustainabilityGrid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .sustainabilityLeft {
+    flex-direction: column;
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
+  }
+
+  .cardImage {
+    height: 200px;
+  }
+}
+
+@media (max-width: 640px) {
+  .cardGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
+  .brandName {
+    font-size: 2.8rem;
+  }
+
+  .ctaBanner h2 {
+    font-size: 2rem;
+  }
+
+  .cardImage {
+    height: 240px;
+  }
+}
